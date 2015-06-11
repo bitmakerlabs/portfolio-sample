@@ -51,7 +51,7 @@ $(document).on('ready', function(e) {
 	});
 
 
-	// PLUGIN: Masonry
+	// PLUGIN: Masonry (http://masonry.desandro.com/)
 	// Tile the photos like bricks to remove any white space
 	$('.photos').masonry({
 		itemSelector: '.photo',
@@ -64,14 +64,14 @@ $(document).on('ready', function(e) {
 	});
 
 
-	// PLUGIN: Sweet Alert
+	// PLUGIN: Sweet Alert (https://github.com/t4t5/sweetalert)
 	// Show any alerted message in a pretty format
 	$('.bar-logo').on('click', function(e) {
 		sweetAlert("Bitmaker Labs Toronto, 2015!")
 	})
 
 
-	// PLUGIN: Inview
+	// PLUGIN: Inview (https://github.com/protonet/jquery.inview)
 	// When an element comes into view, fade it to opaque (visible)
 	// When an element goes out of view, fade it transparent (invisible)
 	$('.photo').bind('inview', function(event, isInView, visiblePartX, visiblePartY) {
@@ -84,6 +84,7 @@ $(document).on('ready', function(e) {
 	});
 
 
-	// PLUGIN: Make each of the images a responsive lightbox
+	// PLUGIN: Fuidbox (http://terrymun.github.io/Fluidbox/)
+	// Make each of the images a responsive lightbox
 	$('.photo a').fluidbox();
 });
