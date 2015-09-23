@@ -33,6 +33,35 @@ $(window).on('scroll', function() {
 });
 
 
+// Fluidbox (lightbox images)
+$('.photo a').fluidbox();
+
+
+
+// When something comes into view
+$('.photo').bind('inview', function (event, visible) {
+	if (visible) {
+		$(this).css('opacity', 1);
+	}
+	else {
+		$(this).css('opacity', 0);
+	}
+});
+
+
+
+// Stack the images like masonary (tiles)
+$('.photos').masonry({
+	itemSelector: '.photo',
+	columnWidth: function( containerWidth ) {
+		return containerWidth/3;
+	}
+});
+
+
+
+$('.tooltip').tooltipster();
+
 
 
 
